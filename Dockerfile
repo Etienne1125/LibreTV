@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 
 LABEL maintainer="LibreTV Team"
-LABEL description="LibreTV - 免费在线视频搜索与观看平台"
+LABEL description="LibreTV - 免費線上觀影平台"
 
 # 设置环境变量
 ENV PORT=8080
@@ -31,4 +31,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
   CMD node -e "require('http').get('http://localhost:8080', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"
 
 # 启动应用
-CMD ["npm", "start"]
+CMD ["npm"， "start"]
